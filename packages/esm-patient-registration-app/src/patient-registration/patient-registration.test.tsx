@@ -161,6 +161,7 @@ const mockOpenmrsConfig: RegistrationConfig = {
         useQuickSearch: true,
         searchAddressByLevel: true,
       },
+      requiredAddressFields: [],
     },
     causeOfDeath: {
       conceptUuid: 'cause-of-death-concept-uuid',

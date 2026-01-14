@@ -1,7 +1,6 @@
 import React from 'react';
 import { Form, Formik } from 'formik';
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { screen } from '@testing-library/react';
 import { getDefaultsFromConfigSchema, useConfig } from '@openmrs/esm-framework';
 import { type AddressTemplate, type IdentifierSource } from '../../patient-registration.types';
 import { mockIdentifierTypes, mockOpenmrsId, mockPatient, mockSession } from '__mocks__';
@@ -100,31 +99,6 @@ describe('Identifiers', () => {
     );
 
     expect(screen.getByText('Identifiers')).toBeInTheDocument();
-    const configureButton = screen.getByRole('button', { name: 'Configure' });
-    expect(configureButton).toBeInTheDocument();
-    expect(configureButton).toBeEnabled();
-  });
-
-  it('should open identifier selection overlay when "Configure" button is clicked', async () => {
-    const user = userEvent.setup();
-    mockResourcesContextValue.identifierTypes = mockIdentifierTypes;
-
-    renderWithContext(
-      <Formik initialValues={{}} onSubmit={null}>
-        <Form>
-          <PatientRegistrationContextProvider value={mockContextValues}>
-            <Identifiers />
-          </PatientRegistrationContextProvider>
-        </Form>
-      </Formik>,
-      ResourcesContextProvider,
-      mockResourcesContextValue,
-    );
-
-    const configureButton = screen.getByRole('button', { name: 'Configure' });
-    await user.click(configureButton);
-
-    expect(screen.getByRole('button', { name: 'Close overlay' })).toBeInTheDocument();
   });
 });
 

@@ -95,6 +95,7 @@ describe('Address hierarchy', () => {
             useQuickSearch: false,
             searchAddressByLevel: false,
           },
+          requiredAddressFields: [],
         },
       } as RegistrationConfig['fieldConfigurations'],
     });
@@ -143,6 +144,7 @@ describe('Address hierarchy', () => {
             useQuickSearch: false,
             searchAddressByLevel: false,
           },
+          requiredAddressFields: [],
         },
       } as RegistrationConfig['fieldConfigurations'],
     });
@@ -167,6 +169,7 @@ describe('Address hierarchy', () => {
             useQuickSearch: false,
             searchAddressByLevel: false,
           },
+          requiredAddressFields: [],
         },
       } as RegistrationConfig['fieldConfigurations'],
     });
@@ -198,6 +201,7 @@ describe('Address hierarchy', () => {
             useQuickSearch: false,
             searchAddressByLevel: false,
           },
+          requiredAddressFields: [],
         },
       } as RegistrationConfig['fieldConfigurations'],
     });
@@ -234,6 +238,7 @@ describe('Address hierarchy', () => {
             useQuickSearch: true,
             searchAddressByLevel: false,
           },
+          requiredAddressFields: [],
         },
       } as RegistrationConfig['fieldConfigurations'],
     });
@@ -262,6 +267,7 @@ describe('Address hierarchy', () => {
             useQuickSearch: false,
             searchAddressByLevel: true,
           },
+          requiredAddressFields: [],
         },
       } as RegistrationConfig['fieldConfigurations'],
     });

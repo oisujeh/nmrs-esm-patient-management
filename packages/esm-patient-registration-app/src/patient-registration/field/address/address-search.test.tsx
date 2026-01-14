@@ -73,6 +73,7 @@ describe('Testing address search bar', () => {
             useQuickSearch: true,
             searchAddressByLevel: false,
           },
+          requiredAddressFields: [],
         },
       } as RegistrationConfig['fieldConfigurations'],
     });

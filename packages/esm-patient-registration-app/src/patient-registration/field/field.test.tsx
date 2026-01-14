@@ -202,6 +202,7 @@ describe('Field', () => {
             useQuickSearch: false,
             searchAddressByLevel: false,
           },
+          requiredAddressFields: [],
         },
       } as RegistrationConfig['fieldConfigurations'],
     });
